@@ -8,7 +8,7 @@ This repository provides an example of how to do gRPC in Julia.
 
 # How to run things
 
-To get a stable and portable development environment for this work, Docker used.  To start this environment, run:
+To get a stable and portable development environment for this work, Docker is used.  To start this environment, run:
 
 ```bash
 ./run.sh
@@ -33,7 +33,6 @@ The generated files are stored in [./golang/greetingservice/](./golang/greetings
 
 ```bash
 julia /example/julia/generate_proto.jl
-/example/golang/generate_proto.sh
 ```
 
 The generated files are stored in [./julia/gen/](./julia/gen/).
