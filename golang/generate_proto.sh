@@ -3,7 +3,7 @@
 # Generate Go from proto files.
 # Generates greeter.pb.go and greeter_grpc.pb.go
 
-OUTPUT_DIR=/example/server/greetingservice
+OUTPUT_DIR=/example/golang/greetingservice
 rm -rf ${OUTPUT_DIR}
 mkdir -p ${OUTPUT_DIR}
 
