@@ -1,9 +1,9 @@
 # test-julia-grpc
-This repository works out the kinks necessary to use gRPC with Julia.
+This repository provides an example of how to do gRPC in Julia.
 
 1. [gRPCClient](https://github.com/JuliaComputing/gRPCClient.jl) is used, since it has some documentation.
 2. [gRPCClient](https://github.com/JuliaComputing/gRPCClient.jl) only supports gRPC clients in Julia.
-3. If a gPRC server in Julia is needed, consider [gRPC](https://github.com/tanmaykm/gRPC.jl), which has zero documentation.
+3. If a gPRC server in Julia is needed, consider [gRPC](https://github.com/tanmaykm/gRPC.jl), which has zero documentation.  Please create a PR to add the example here.
 4. To provide a gRPC server to test with, one is implemented in Go.
 
 # How to run things
@@ -19,6 +19,8 @@ This will give you a bash shell in a Docker container with all of the necessary 
 All following commands are to be run in the container.
 
 # How to generate gRPC code from proto files
+
+This should not be necessary, unless you change the proto files.
 
 ## Go
 
