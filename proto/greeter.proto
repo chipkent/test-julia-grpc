@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = "deephaven.io/test-julia-grpc/greetingservice";
+
 package GreetingService;
 
 // The greeting service definition.
