@@ -16,19 +16,19 @@ import (
 // Make an RPC call
 func makeRPC(client gs.GreeterClient) {
 	name := fmt.Sprintf("Name-%v", rand.Int())
-	log.Printf("CLIENT: Calling makeRPC for name=\"%s\"", name)
+	log.Printf("CLIENT-GO: Calling makeRPC for name=\"%s\"", name)
     ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
     defer cancel()
 
 	request := &gs.HelloRequest{Name: name}
-	log.Printf("CLIENT: Request: %v", request)
+	log.Printf("CLIENT-GO: Request: %v", request)
 	response, err := client.SayHello(ctx, request)
 
     if err != nil {
-        log.Fatalf("CLIENT: %v.SayHello(_) = _, %v: ", client, err)
+        log.Fatalf("CLIENT-GO: %v.SayHello(_) = _, %v: ", client, err)
     }
 
-	log.Printf("CLIENT: Response: %s", response.Message)
+	log.Printf("CLIENT-GO: Response: %s", response.Message)
 }
 
 func main() {
@@ -36,7 +36,7 @@ func main() {
     conn, err := grpc.Dial("localhost:11000", grpc.WithInsecure())
 
     if err != nil {
-        log.Fatalf("CLIENT: Failed to dial: %v", err)
+        log.Fatalf("CLIENT-GO: Failed to dial: %v", err)
     }
     defer conn.Close()
 

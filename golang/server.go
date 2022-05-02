@@ -20,18 +20,18 @@ type GreeterServer struct {
 
 // gRPC method implementation
 func (GreeterServer) SayHello(context context.Context, request *gs.HelloRequest) (*gs.HelloReply, error) {
-	log.Printf("SERVER: SayHello request: name=%s", request.Name)
-	message := fmt.Sprintf("Got your message: name=%s", request.Name)
+	log.Printf("SERVER-GO: SayHello request: name=%s", request.Name)
+	message := fmt.Sprintf("Go server got your message: name=%s", request.Name)
 	return &gs.HelloReply{Message: message}, nil
 }
 
 func main() {
-	log.Printf("SERVER: Starting")
-	defer log.Printf("SERVER: Exiting")
+	log.Printf("SERVER-GO: Starting")
+	defer log.Printf("SERVER-GO: Exiting")
 
 	lis, err := net.Listen("tcp", "localhost:11000")
 	if err != nil {
-		log.Fatalf("SERVER: Failed to listen: %v", err)
+		log.Fatalf("SERVER-GO: Failed to listen: %v", err)
 	}
 
 	grpcServer := grpc.NewServer()

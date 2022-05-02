@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+// Set the Go package name
 option go_package = "deephaven.io/test-julia-grpc/greetingservice";
 
 package GreetingService;

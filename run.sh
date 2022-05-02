@@ -1,6 +1,6 @@
 #!/bin/sh
 
-docker build -t test-julia-grpc .
+# Create a bash shell on a docker container with all necessary packages installed.
 
-# docker run -it test-julia-grpc
+docker build -t test-julia-grpc .
 docker run -v "$(pwd)":/example -it test-julia-grpc /bin/bash
